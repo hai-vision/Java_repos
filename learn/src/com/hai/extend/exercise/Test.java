@@ -1,2 +1,9 @@
-package com.hai.extend.exercise;public class Test {
+package com.hai.extend.exercise;
+
+public class Test {
+    public static void main(String[] args) {
+
+        B b = new B();
+
+    }
 }
