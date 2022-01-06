@@ -17,7 +17,7 @@ public class Main {
 
         "hello".equals("abc");
         Integer integer = new Integer(100);
-        Object
+
 
     }
 }
