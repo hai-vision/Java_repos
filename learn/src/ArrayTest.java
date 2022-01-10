@@ -7,7 +7,9 @@ public class ArrayTest {
         MyTools mt = new MyTools();
         mt.printArr(nums);
 
-
+        for(int num:nums){
+            System.out.println(num);
+        }
     }
 }
 
