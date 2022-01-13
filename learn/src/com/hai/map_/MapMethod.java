@@ -42,13 +42,23 @@ public class MapMethod {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
 
+        // 获取迭代器对象
+        Iterator iterator1 = set.iterator();
+        System.out.println("==================================");
+        while(iterator1.hasNext()) {
+            Object obj = iterator1.next();
+            Map.Entry entry = (Map.Entry) obj;
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+
+        }
+
         // 4. 获取所有的value
         Collection values = map.values();
         for(Object value :values ) {
             System.out.println(value);
         }
 
-        
+
 
 
 

@@ -70,7 +70,8 @@ public class HashSetSource {
                     // 当前位置已有元素时，利用equals方法一次比较链表元素是否相同
                     else {
                         Node<K,V> e; K k;
-                        // 如果传入 key的哈希值与当前Node的哈希值并且关键字的内容相同，则不添加
+                        // 如果传入 key的哈希值与当前Node的哈希值
+                        // 并且传入的对象和Node是同一个对象，或者关键字的内容相同，则不添加
                         if (p.hash == hash &&
                             ((k = p.key) == key || (key != null && key.equals(k))))
                             e = p;
@@ -88,7 +89,7 @@ public class HashSetSource {
                                     p.next = newNode(hash, key, value, null);
                                     // 把新结点插入到链表的末尾后，立即判断当前单链表的结点个数是否等于8时，如果等于则进行树化（红黑树）
                                     // 树化的条件
-                                    // 1. 单条链表的长度等于8
+                                    // 1. 单条链表的长度大于8
                                     // 2. table表的容量大于等于64
                                     //    2.1 当单链表的表长等于，但table表的容量小于64，则不会立即树化
                                     //    2.2 首先会将table表进行扩容，直到table表的容量等于64，才会树化
@@ -96,7 +97,8 @@ public class HashSetSource {
                                         treeifyBin(tab, hash);
                                     break;
                                 }
-                                // 如果 单链表上的Node元素的哈希值和关键字内容与传入的一致，则不添加
+                                // 如果传入 key的哈希值与当前Node的哈希值
+                                // 并且传入的对象和Node是同一个对象，或者关键字的内容相同，则不添加
                                 if (e.hash == hash &&
                                     ((k = e.key) == key || (key != null && key.equals(k))))
                                     break;
