@@ -1,0 +1,22 @@
+
+Q
+java:S1854"6Remove this useless assignment to local variable "n4".(Êç›žûÿÿÿÿ
+Q
+java:S1854";Remove this useless assignment to local variable "integer".(¸·¢·
+7
+java:S2129"!Remove this "Integer" constructor(¸·¢·
+B
+java:S1481",Remove this unused "integer" local variable.(¸·¢·
+N	java:S106"9Replace this use of System.out or System.err by a logger.(‹ÿî­
+B
+java:S1481"'Remove this unused "n4" local variable.(Êç›žûÿÿÿÿ
+K
+java:S1854$"6Remove this useless assignment to local variable "n2".(øëø 
+U
+java:S1854!":Remove this useless assignment to local variable "aByte1".(–Òù¿üÿÿÿÿ
+3
+java:S2129"Remove this "Byte" constructor(ñð—T
+F
+java:S1481!"+Remove this unused "aByte1" local variable.(–Òù¿üÿÿÿÿ
+<
+java:S1481$"'Remove this unused "n2" local variable.(øëø 

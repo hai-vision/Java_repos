@@ -1,0 +1,15 @@
+
+R
+java:S1854"<Remove this useless assignment to local variable "integer1".(¬Ğà
+L
+java:S1854"7Remove this useless assignment to local variable "str".(ÁÑñ 
+<
+java:S2129"!Remove this "Integer" constructor(¨û¹—ıÿÿÿÿ
+=
+java:S1481"(Remove this unused "str" local variable.(ÁÑñ 
+Q	java:S125"<This block of commented-out lines of code should be removed.(Âé–İ
+C
+java:S1481"-Remove this unused "integer1" local variable.(¬Ğà
+N	java:S106"9Replace this use of System.out or System.err by a logger.(’Ëú‹
+R
+java:S4973"<Strings and Boxed types should be compared using "equals()".(’Ëú‹
