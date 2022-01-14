@@ -53,3 +53,23 @@ _
 ,src/com/hai/genericity/CustomGenericity.java,b\5\b5816b3ba9273a5e0bf25068ae31ed262683f666
 R
 "src/com/hai/genericity/Person.java,b\f\bf9638103020ea20f175e60766d9208cdcc8d384
+U
+%src/com/hai/genericity/Generic02.java,c\5\c564a00d300597122e5d0a1f2af9c51d7d33ca43
+[
++src/com/hai/genericity/exercise/MyDate.java,7\f\7f344922d64ca55b98e0d99c0aca11c04c04fa21
+S
+#src/com/hai/genericity/Student.java,9\0\900ffb50ca456edff7112872d84715c0356d37b7
+P
+ src/com/hai/junit/JunitTest.java,9\3\937de389c2b5b86e9d81059afd3114d04b5ef176
+Z
+*src/com/hai/genericity/exercise2/User.java,3\a\3a41e1b77b691bbd67f6132a590720b0023b7d91
+U
+%src/com/hai/genericity/Generic01.java,f\3\f3fed09c2da8a67f12735e242441202c42c06210
+]
+-src/com/hai/genericity/exercise/Employee.java,4\b\4b1a3a36c8ba6f760dfe205dd541b09ecfd3100e
+Y
+)src/com/hai/genericity/exercise/Test.java,e\e\eebe62835858829f3af8222a0619c3d2b82af6b9
+Z
+*src/com/hai/genericity/exercise2/Test.java,b\5\b5d9f698a5422e269e92797335bd42bdf9596294
+Y
+)src/com/hai/genericity/exercise2/DAO.java,0\6\067e7e49da0a3baf8288d9a259d9bce8415e3bf0
