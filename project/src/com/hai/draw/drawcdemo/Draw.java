@@ -1,4 +1,6 @@
-package com.hai.draw.drawcircle;
+package com.hai.draw.drawcdemo;
+
+import com.hai.draw.drawcircle.DrawCicle;
 
 /**
  * @author hai
@@ -7,6 +9,6 @@ package com.hai.draw.drawcircle;
  */
 public class Draw {
     public static void main(String[] args) {
-        new DrawCicle();
+        new DrawGraph();
     }
 }

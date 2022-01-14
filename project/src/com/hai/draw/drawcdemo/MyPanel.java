@@ -1,4 +1,4 @@
-package com.hai.draw.drawcircle;
+package com.hai.draw.drawcdemo;
 
 import java.awt.*;
 
@@ -13,20 +13,40 @@ import java.awt.*;
  */
 public class MyPanel extends Panel {
 
-    //重写构造器方法
+    // 重写父类的构造器
 
 
     @Override
     public void paint(Graphics g) {
-        super.paint(g); // 调用父类构造器，完成初始化
+        super.paint(g);
 
-        // 在面板上画一个圆圈
-        /*
-            x: 要绘制的椭圆的左上角 x 的坐标
-            y: 要绘制的椭圆的右上角 y 的坐标
-            width: 椭圆的宽
-            height: 椭圆的高
-         */
-        g.drawOval(200, 100, 150, 150);
+        // 画直线
+        //g.drawLine(10, 10, 100,100);
+
+        // 画矩形框
+        //g.drawRect(10,10,100,100);
+        // 填充矩阵
+        // 设置画笔的颜色
+        //g.setColor(Color.GREEN);
+        //g.fillRect(10,10,100,100);
+
+        // 画字符串
+        // 设置画笔的颜色
+        //g.setColor(Color.RED);
+        // 设置字体
+        //g.setFont(new Font("宋体", Font.BOLD, 50));
+        //g.drawString("Y Jing", 100, 100);
+
+        // 设置画笔颜色
+        g.setColor(Color.CYAN);
+        // 填充矩形
+        g.fillRect(100, 100, 10, 60);
+        g.fillRect(140, 100, 10, 60);
+        g.fillOval(110, 115, 30,30);
+        g.fillRect(110, 110, 30, 40);
+        g.drawLine(125, 120, 125, 40);
+
+
+
     }
 }

@@ -1,6 +1,4 @@
-package com.hai.draw.drawcdemo;
-
-import com.hai.draw.drawcircle.DrawCicle;
+package com.hai.draw.drawcircle;
 
 /**
  * @author hai
