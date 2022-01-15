@@ -1,0 +1,18 @@
+
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çµí‘
+W
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(¬¬Š¥
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÆİÍ—üÿÿÿÿ
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+c
+java:S1075/"ARefactor your code to get this URI from a customizable parameter.(ä¼†üÿÿÿÿ8ó´çå/
+U	java:S1067"9Replace this use of System.out or System.err by a logger.(ğÑíò8”Á¼çå/
+L
+java:S20931"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8û´çå/
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(µ‘¥‘
+b
+java:S2259="@A "NullPointerException" could be thrown; "fw" is nullable here.(’™à€üÿÿÿÿ8º¯Äçå/
+^
+java:S2259&"HA "NullPointerException" could be thrown; "fileReader" is nullable here.(¦ÈøÉ

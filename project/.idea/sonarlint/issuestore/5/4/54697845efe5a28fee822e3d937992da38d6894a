@@ -1,0 +1,9 @@
+
+\
+java:S1854"ARemove this useless assignment to local variable "string_reader".(ëž¹ªúÿÿÿÿ
+M
+java:S1481"2Remove this unused "string_reader" local variable.(ëž¹ªúÿÿÿÿ
+k	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÎìåùÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëž¹ªúÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™çÎ½

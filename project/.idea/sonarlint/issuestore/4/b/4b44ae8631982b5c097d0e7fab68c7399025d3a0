@@ -1,0 +1,9 @@
+
+W
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(Û¿³Ô
+S	java:S106""9Replace this use of System.out or System.err by a logger.(ñ—¸½úÿÿÿÿ
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¬æ
+Z
+java:S2259("DA "NullPointerException" could be thrown; "buffer" is nullable here.(şï¬
