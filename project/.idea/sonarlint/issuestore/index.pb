@@ -15,12 +15,8 @@ T
 $src/com/hai/iostream/FileCreate.java,e\f\eff0f8b0a86f9eafed977264a70fc9347cca2605
 U
 %src/com/hai/iostream/FileOparate.java,6\6\66a0b8f80c266109d01e46fde578a322ea393183
-f
-6src/com/hai/iostream/bytestream/FileOutputStream_.java,7\b\7b58a957148f0fa14aef0afc5a539841eaab69f7
 ]
 -src/com/hai/iostream/bytestream/FileCopy.java,9\a\9a1b5317f16e80e437bb066488e623ed6784fb71
-e
-5src/com/hai/iostream/bytestream/FileInputStream_.java,8\3\836a558c93b78efd5c71f74d1c84b3d5257b3469
 `
 0src/com/hai/iostream/charstream/FileReader_.java,c\5\c5ab89b766d99a07c88ef881c4bd269862d1f4f1
 W
@@ -41,9 +37,3 @@ Z
 *src/com/hai/iostream/exercise/Reader_.java,e\8\e833866656f50049a67bbb4342d1e70da35c2ef0
 ;
 project.iml,1\d\1d248ef135e3a29ddde21c85cbbea238fa4c6429
-j
-:src/com/hai/iostream/processingstream/BufferedReader_.java,4\b\4b44ae8631982b5c097d0e7fab68c7399025d3a0
-d
-4src/com/hai/iostream/objectstream/ObjectStream_.java,7\2\72208c41f9893d3c4ade987902a704ee931b53a5
-i
-9src/com/hai/iostream/objectstream/ObjectInputStream_.java,c\0\c097563a4a3e66186f28318032e5fc4bb7d13767

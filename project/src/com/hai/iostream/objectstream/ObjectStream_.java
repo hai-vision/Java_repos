@@ -30,11 +30,11 @@ public class ObjectStream_ implements Serializable {
         ObjectOutputStream stream = null;
         try {
             stream = new ObjectOutputStream(new FileOutputStream(filename));
-            stream.write(100);
-            stream.writeBoolean(true);
-            stream.writeDouble(97.2);
-            stream.writeFloat(22.1f);
-            stream.writeUTF("long");
+            //stream.writeInt(100);
+            //stream.writeBoolean(true);
+            //stream.writeDouble(97.2);
+            //stream.writeFloat(22.1f);
+            //stream.writeUTF("long");
             stream.writeObject(new Dog());
 
         } catch (IOException e) {
@@ -48,19 +48,6 @@ public class ObjectStream_ implements Serializable {
         }
 
     }
-}
-
-class Dog implements Serializable {
-    private String name = "小黑";
-    private String color = "black";
-
-    public Dog () {
-
-    }
-
-    public Dog (String name, String color) {
-        this.name = name;
-        this.color = color;
-    }
 
 }
+
