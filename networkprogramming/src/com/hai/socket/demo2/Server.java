@@ -18,18 +18,34 @@ public class Server {
         InputStream ips = null;
         InputStreamReader isr = null;
         Socket socket = null;
+        BufferedReader br = null;
+        BufferedWriter bufferedWriter = null;
+
         try {
             serverSocket = new ServerSocket(9999);
             socket = serverSocket.accept();
             // 接收客户端发送的字符流消息
             ips = socket.getInputStream();
             isr = new InputStreamReader(ips);
-            char[] buff = new char[64];
-            int readLen;
-            while ((readLen = isr.read(buff)) != -1) {
-                System.out.println(new String(buff, 0, readLen));
-                
+
+            br = new BufferedReader(isr);
+            String str;
+            while((str = br.readLine()) != null) {
+                System.out.println(str);
             }
+
+            // 向客户端发送消息
+            /*
+                1. 通过socket获取字节流
+                2. 利用转换流OutputStreamWriter 将字节流转换为字符流
+                3. 利用BufferedWriter接收转换流
+             */
+
+            bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+            bufferedWriter.write("hello, client");
+
+            bufferedWriter.flush();
+            socket.shutdownOutput();
 
 
 
@@ -40,9 +56,10 @@ public class Server {
             e.printStackTrace();
         } finally {
             try {
+                br.close();
+                bufferedWriter.close();
                 socket.close();
-                ips.close();
-                isr.close();
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
