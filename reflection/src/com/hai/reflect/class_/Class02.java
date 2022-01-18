@@ -27,6 +27,7 @@ public class Class02 {
         // 通过反射获取属性, 但是不能直接获取私有属性
         Field field = cls.getField("brand");
         System.out.println(field.get(car));
+        System.out.println(field.getName());
         // 通过反射给属性赋值
         field.set(car, "Audi");
         System.out.println(field.get(car));
