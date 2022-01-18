@@ -1,0 +1,10 @@
+
+\
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(¤ºıÿÿÿÿ
+Z
+java:S2147 "DCombine this catch with the one at line 30, which has the same body.(ï­£Ä
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¯¿´çÿÿÿÿÿ
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+V
+java:S2259$"@A "NullPointerException" could be thrown; "br" is nullable here.(µÖ€’

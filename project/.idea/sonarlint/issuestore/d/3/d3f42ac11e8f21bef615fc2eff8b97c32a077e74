@@ -1,0 +1,14 @@
+
+Q
+java:S1854"6Remove this useless assignment to local variable "fw".(İÓÅıÿÿÿÿÿ
+B
+java:S1481"'Remove this unused "fw" local variable.(Ó°ñûÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Â‡¤Ó
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÿ»£Ğûÿÿÿÿ
+>	java:S108!")Either remove or fill this block of code.(Úîø›
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+c
+java:S2095"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(İÓÅıÿÿÿÿÿ
+c
+java:S2095"HUse try-with-resources or close this "FileReader" in a "finally" clause.(¯äëŠÿÿÿÿÿ

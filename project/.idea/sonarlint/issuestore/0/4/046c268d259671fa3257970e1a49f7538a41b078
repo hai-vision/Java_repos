@@ -1,0 +1,9 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(ĞÎÂ•şÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¿ë˜ÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ô‚ˆ®øÿÿÿÿ
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(ê¾‰â
+^
+java:S20951"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(ıòŞ
+c
+java:S2095"HUse try-with-resources or close this "FileReader" in a "finally" clause.(ó™§ãşÿÿÿÿ

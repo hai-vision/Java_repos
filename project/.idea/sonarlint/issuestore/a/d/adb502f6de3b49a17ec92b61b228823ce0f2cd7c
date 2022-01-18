@@ -1,0 +1,7 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(î„¹Æùÿÿÿÿ
+>	java:S108")Either remove or fill this block of code.(Úîø›
+L
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8„‡­Žæ/
+e
+java:S2095"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(ˆœï¡8Ò¤²Žæ/
