@@ -32,7 +32,7 @@ public class ReflectionAccessMethod {
         // 暴破
         say1.setAccessible(true);
         say1.invoke(user);
-        
+
 
     }
 }
