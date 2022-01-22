@@ -2,10 +2,7 @@ package com.hai.jdbc;
 
 import org.junit.jupiter.api.Test;
 
-import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Properties;
 
 /**
@@ -57,6 +54,29 @@ public class JDBC02 {
         Statement statement = connection.createStatement();
         int i = statement.executeUpdate(sql);
         System.out.println(i > 0 ? "成功":"失败");
+
+    }
+
+    @Test
+    public void connect03() throws Exception {
+        // Class.forName自动完成注册代码驱动
+
+        Class<?> cls = Class.forName("com.mysql.jdbc.Driver");
+        /*
+            static {
+                try {
+                    DriverManager.registerDriver(new Driver());
+                } catch (SQLException var1) {
+                    throw new RuntimeException("Can't register driver!");
+                }
+            }
+         */
+        String url = "jdbc:mysql://localhost:3306/javaDB";
+        String user = "root";
+        String password = "hai";
+
+        Connection connection = DriverManager.getConnection(url, user, password);
+        System.out.println(connection);
 
     }
 
