@@ -13,8 +13,7 @@
 
     <insert id="insertStudent" parameterType="Student">
         <!-- 主键回填 ： 将新数据的ID，存入到java对象和主键对应的属性中 -->
-        <!-- 针对的主键类型是 primary key auto_increment-->
-        <selectKey order="AFTER" resultType="int" keyProperty="id">
+        <selectKey>
             select last_insert_id()
         </selectKey>
         insert into t_student values(#{id}, #{name}, #{gender})
