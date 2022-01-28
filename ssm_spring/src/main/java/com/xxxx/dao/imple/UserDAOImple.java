@@ -19,4 +19,12 @@ public class UserDAOImple implements UserDAO {
         System.out.println("UserDAOImple 的无参构造器被调用");
     }
 
+    public void init () {
+        System.out.println("初始化方法");
+    }
+
+    public void destroy () {
+        System.out.println("销毁方法");
+    }
+
 }

@@ -17,4 +17,6 @@ public class UserDAODemo {
         UserDAO userDAO = (UserDAO) app.getBean("userDAO");
         userDAO.save();
     }
+
+
 }
