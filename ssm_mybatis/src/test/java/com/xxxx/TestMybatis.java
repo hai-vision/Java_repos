@@ -2,7 +2,9 @@ package com.xxxx;
 
 
 
+import com.xxxx.dao.TDAO;
 import com.xxxx.dao.UserDAO;
+import com.xxxx.domain.T;
 import com.xxxx.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -33,7 +35,7 @@ public class TestMybatis
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         // 4. 通过SQLSession获得DAO实现类的对象
-        UserDAO mapper = sqlSession.getMapper(UserDAO.class);
+        //UserDAO mapper = sqlSession.getMapper(UserDAO.class);
 
         // 5. 测试查询方法
         //User user1 = mapper.queryUserById(1);
@@ -56,10 +58,16 @@ public class TestMybatis
         //User user4 = mapper.queryUserByIdAndPassword2(user);
         //System.out.println(user4);
 
-        List<User> users = mapper.queryUsersByLike("hai");
-        for (User user : users) {
-            System.out.println(user);
-        }
+        //List<User> users = mapper.queryUsersByLike("hai");
+        //for (User user : users) {
+        //    System.out.println(user);
+        //}
+
+        T t = new T(null);
+        TDAO mapper = sqlSession.getMapper(TDAO.class);
+        mapper.insertT(t);
+        sqlSession.commit();
+
 
 
     }
