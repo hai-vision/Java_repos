@@ -18,4 +18,15 @@ public interface UserDAO {
     User queryUserByIdAndPassword1(Map map);
     User queryUserByIdAndPassword2(User user);
     List<User> queryUsersByLike(@Param("username") String username);
+
+    User queryUser (User user);
+    List<User> queryUser1 (User user);
+
+    int updateUser (User user);
+    int updateUser1 (User user, Integer id);
+
+    int deleteBatchUser (List<Integer> idList);
+    int insertBatchUser (List<User> userList);
+
+
 }
