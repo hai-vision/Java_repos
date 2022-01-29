@@ -36,6 +36,11 @@
         <mapper resource="UserDAOMapper.xml"></mapper>
         <mapper resource="StudentDAOMapper.xml"></mapper>
         <mapper resource="TDAOMapper.xml"></mapper>
+        <mapper resource="PassengerDAOMapper.xml"></mapper>
+        <mapper resource="DepartmentDAOMapper.xml"></mapper>
+        <mapper resource="EmployeeDAOMapper.xml"></mapper>
+        <mapper resource="SubjectDAOMapper.xml"></mapper>
+        <mapper resource="Student1DAOMapper.xml"></mapper>
 
     </mappers>
 

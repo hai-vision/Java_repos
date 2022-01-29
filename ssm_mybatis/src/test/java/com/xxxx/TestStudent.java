@@ -55,8 +55,8 @@ public class TestStudent {
         //sqlSession.commit();
         //System.out.println(i > 0 ?
 
-        Student student = mapper.queryStudentById(1);
-        System.out.println(student);
+        //Student student = mapper.queryStudentById(1);
+        //System.out.println(student);
 
         List<Student> students = mapper.queryStudents();
         for (Student student1 :students) {
