@@ -18,6 +18,7 @@ public interface UserDAO {
     User queryUserByIdAndPassword1(Map map);
     User queryUserByIdAndPassword2(User user);
     List<User> queryUsersByLike(@Param("username") String username);
+    List<User> queryAllUsers();
 
     User queryUser (User user);
     List<User> queryUser1 (User user);
@@ -27,6 +28,7 @@ public interface UserDAO {
 
     int deleteBatchUser (List<Integer> idList);
     int insertBatchUser (List<User> userList);
+
 
 
 }
