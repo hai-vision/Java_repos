@@ -1,5 +1,7 @@
 package com.xxxx;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInterceptor;
 import com.xxxx.dao.UserDAO;
 import com.xxxx.domain.User;
 import com.xxxx.utils.MybatisUtils;
@@ -78,6 +80,18 @@ public class TestUser {
 
         mapper.insertBatchUser(arrayList);
         MybatisUtils.commit();
+
+    }
+
+    @Test
+    public void testUser6 (){
+        UserDAO mapper = MybatisUtils.getMapper(UserDAO.class);
+        PageHelper.startPage(2, 2);
+
+        List<User> users = mapper.queryAllUsers();
+        for (User user : users) {
+            System.out.println(user);
+        }
 
     }
 }

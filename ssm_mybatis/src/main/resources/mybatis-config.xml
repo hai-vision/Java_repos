@@ -3,10 +3,16 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+    <!-- 参数的顺序
+    properties?, settings?, typeAliases?, typeHandlers?,
+    objectFactory?, objectWrapperFactory?, reflectorFactory?,
+    plugins?, environments?, databaseIdProvider?, mappers?
+    -->
     <!-- 导入外部参数-->
     <properties resource="jdbc.properties"></properties>
     
     <settings>
+        <!-- 开启二级缓存 SQLSessionFactory -->
         <setting name="cacheEnabled" value="true"/>
     </settings>
     <!-- 实体类别名-->
@@ -18,17 +24,30 @@
         <package name="com.xxxx.domain"/>
 
     </typeAliases>
+    
+    <plugins>
+        <!-- com.github.pagehelper为PageInterceptor所在的包名 -->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+
     <!-- 核心配置文件 -->
     <environments default="hai_config">
         <!-- 数据库相关配置 -->
         <environment id="hai_config">
             <!-- 事务控制类型 -->
             <transactionManager type="jdbc"></transactionManager>
-            <!-- 数据连接参数 -->
-            <dataSource type="org.apache.ibatis.datasource.pooled.PooledDataSourceFactory">
-                <property name="driver" value="${driver}"/>
+            <!-- 默认连接池，数据连接参数 -->
+<!--            <dataSource type="org.apache.ibatis.datasource.pooled.PooledDataSourceFactory">-->
+<!--                <property name="driver" value="${driver}"/>-->
+<!--                &lt;!&ndash; &转义&amp; &ndash;&gt;-->
+<!--                <property name="url" value="${url}"/>-->
+<!--                <property name="username" value="${user}"/>-->
+<!--                <property name="password" value="${password}"/>-->
+<!--            </dataSource>-->
+            <dataSource type="com.xxxx.datasource.MyDruidDataSourceFactory">
+                <property name="driverClass" value="${driver}"/>
                 <!-- &转义&amp; -->
-                <property name="url" value="${url}"/>
+                <property name="jdbcUrl" value="${url}"/>
                 <property name="username" value="${user}"/>
                 <property name="password" value="${password}"/>
             </dataSource>

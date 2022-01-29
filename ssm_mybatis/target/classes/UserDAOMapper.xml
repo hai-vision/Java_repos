@@ -3,6 +3,50 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.xxxx.dao.UserDAO">
+    <!-- 二级缓存  -->
+    <cache/>
+
+    <!-- sql片段-->
+    <sql id="user_field">
+        select id, username from t_user
+    </sql>
+    <select id="queryUser" resultType="User">
+        <!-- User对象中的属性赋值时，只有查询作为查询条件的属性才能有值，其他属性不能被赋值-->
+        <include refid="user_field"/>
+            where
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <if test="username != null">
+                username = #{username}
+            </if>
+
+    </select>
+
+    <select id="queryAllUsers" resultType="User">
+        select * from t_user
+    </select>
+
+    <select id="queryUser1" resultType="User">
+        <include refid="user_field"/>
+        <!-- where标签的作用-->
+        <!-- 1. 提供提个where子句 -->
+        <!-- 2. 当where条件子句以 or或者and开头时，则将其去掉-->
+        <!--
+        1. prefix: 前缀
+        2. suffixOverrides：后缀结尾的标识将会被覆盖
+        -->
+        <trim prefix="where" prefixOverrides="or|and">
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <if test="gender !=null">
+                or gender =#{gender}
+            </if>
+        </trim>
+    </select>
+
+
     <select id="queryUserById" resultType="User">
         select * from t_user where id=#{arg0}
     </select>
@@ -30,6 +74,81 @@
         from t_user
         where username like concat('%', #{username}, '%')
     </select>
+
+    <update id="updateUser" parameterType="User">
+        update t_user
+        <!--
+        1. prefix: 前缀
+        2. suffixOverrides：后缀结尾的标识将会被覆盖
+        -->
+        <trim prefix="set" suffixOverrides=",">
+            <if test="id != null">
+                id = #{id},
+            </if>
+            <if test="username != null">
+                username = #{username},
+            </if>
+            <if test="password != null">
+                password = #{password},
+            </if>
+            <if test="gender != null">
+                gender = #{gender},
+            </if>
+            <if test="regist_time != null">
+                regist_time = #{regist_time},
+            </if>
+        </trim>
+            where id = #{id}
+
+
+    </update>
+
+<!--    <update id="updateUser" parameterType="User">-->
+<!--        update t_user-->
+<!--        <set>-->
+<!--            &lt;!&ndash;-->
+<!--            1. set标签，补充一个set关键字-->
+<!--            2. 自动去掉结尾的逗号-->
+<!--            &ndash;&gt;-->
+<!--            <if test="id != null">-->
+<!--                id = #{id},-->
+<!--            </if>-->
+<!--            <if test="username != null">-->
+<!--                username = #{username},-->
+<!--            </if>-->
+<!--            <if test="password != null">-->
+<!--                password = #{password},-->
+<!--            </if>-->
+<!--            <if test="gender != null">-->
+<!--                gender = #{gender},-->
+<!--            </if>-->
+<!--            <if test="regist_time != null">-->
+<!--                regist_time = #{regist_time},-->
+<!--            </if>-->
+<!--        </set>-->
+<!--        where id = #{id}-->
+
+
+<!--    </update>-->
+
+    <!-- 批量删除 -->
+    <delete id="deleteBatchUser" parameterType="java.util.List">
+        <!-- delete from t_user where id in (x,x,x,x); -->
+        delete from t_user where id in
+        <foreach collection="list" open="(" close=")" item="id1" separator=",">
+            #{id1}
+        </foreach>
+    </delete>
+
+    <!-- 批量添加 -->
+    <insert id="insertBatchUser" parameterType="java.util.List">
+--         insert into t_user values (null, x,xx,x),(null, x, x, x);
+        insert into t_user values
+        <foreach collection="list" open="" close="" item="user1" separator=",">
+            (null, #{user1.username}, #{user1.password}, #{user1.gender}, #{user1.regist_time})
+        </foreach>
+
+    </insert>
 
 
 </mapper>

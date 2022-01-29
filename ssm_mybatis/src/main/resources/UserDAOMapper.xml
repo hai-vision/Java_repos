@@ -23,6 +23,10 @@
 
     </select>
 
+    <select id="queryAllUsers" resultType="User">
+        select * from t_user
+    </select>
+
     <select id="queryUser1" resultType="User">
         <include refid="user_field"/>
         <!-- where标签的作用-->
