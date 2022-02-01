@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    1. schema: 规范
+    2. 所获取的对象默认都是单例，可以通过scope属性更改为多例模式
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDAO" class="com.xxxx.dao.UserDAOImpl"></bean>
+    <bean id="userService" class="com.xxxx.service.UserServiceImpl">
+        <!-- 为UserServiceImpl的userDAO属性赋值，值是id为UserDAO的一个bean-->
+        <property name="userDAO" ref="userDAO"></property>
+    </bean>
+
+    <bean id="student" class="com.xxxx.domain.Student">
+        <property name="id" value="22"></property>
+        <property name="name" value="ball"></property>
+    </bean>
+    <bean id="user" class="com.xxxx.domain.User">
+        <!--
+            1. set注入
+            2. 8种基本数据类型、 String、Date 可以直接使用value属性
+
+        -->
+        <property name="id" value="1"></property>
+        <property name="password" value="123"></property>
+        <property name="age" value="22"></property>
+        <property name="bornDate" value="1992/4/3"></property>
+        <property name="sex" value="男"></property>
+        <property name="hobbys">
+            <array>
+                <value>football</value>
+                <value>basketball</value>
+            </array>
+        </property>
+
+        <property name="names">
+            <list>
+                <value>ball</value>
+                <value>messi</value>
+            </list>
+        </property>
+
+        <property name="phones">
+            <set>
+                <value>iphone</value>
+                <value>xiaomi</value>
+            </set>
+        </property>
+
+        <property name="contries">
+            <map>
+                <entry key="ch" value="chinese"></entry>
+                <entry key="en" value="english"></entry>
+            </map>
+        </property>
+
+        <property name="student" ref="student"></property>
+    </bean>
+</beans>

@@ -3,5 +3,5 @@ package com.xxxx.dao;/**
  * @date 2022/2/1
  * version 1.0
  */
- @SuppressWarnings({"all"})public class UserDAO {
+ @SuppressWarnings({"all"})public class UserDAOImpl {
 }
