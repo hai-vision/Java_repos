@@ -8,4 +8,9 @@ package com.xxxx.service;
 @SuppressWarnings({"all"})
 public interface UserService {
     void hello ();
+
+    void addUser();
+    void deleteUser ();
+    void updateUser ();
+    void alterUser ();
 }

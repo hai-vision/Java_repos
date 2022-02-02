@@ -8,14 +8,8 @@ import com.xxxx.dao.UserDAO;
  * version 1.0
  */
 @SuppressWarnings({"all"})
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl2 implements UserService2{
 
-    // 定义UserDAO的接口
-    private UserDAO userDAO;
-    @Override
-    public void hello() {
-        userDAO.say();
-    }
 
     @Override
     public void addUser() {
@@ -40,13 +34,7 @@ public class UserServiceImpl implements UserService{
 
     }
 
-    public UserDAO getUserDAO() {
-        return userDAO;
-    }
 
-    public void setUserDAO(UserDAO userDAO) {
-        this.userDAO = userDAO;
-    }
 
 
 }

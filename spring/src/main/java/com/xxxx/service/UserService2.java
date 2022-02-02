@@ -6,11 +6,10 @@ package com.xxxx.service;
  * version 1.0
  */
 @SuppressWarnings({"all"})
-public interface UserService {
-    void hello ();
+public interface UserService2 {
 
     void addUser();
-    void deleteUser ();
-    void updateUser ();
-    void alterUser ();
+    void deleteUser();
+    void updateUser();
+    void alterUser();
 }
